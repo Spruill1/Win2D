@@ -832,7 +832,7 @@ namespace CodeGen
             }
             else if (property.IsHdrAlias)
             {
-                // The platform doesn't natively support HDR colors, so we set the mapping type to unknown.
+                // The platform doesn't natively support Hdr colors, so we set the mapping type to unknown.
                 return "GRAPHICS_EFFECT_PROPERTY_MAPPING_UNKNOWN";
             }
             else if (property.TypeNameCpp == "Rect")

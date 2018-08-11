@@ -25,7 +25,7 @@
 #include "DpiCompensationEffect.h"
 #include "GammaTransferEffect.h"
 #include "GaussianBlurEffect.h"
-#include "HdrToneMapEffect.h"
+#include "HDRToneMapEffect.h"
 #include "HueRotationEffect.h"
 #include "LinearTransferEffect.h"
 #include "LuminanceToAlphaEffect.h"
@@ -95,7 +95,7 @@ std::pair<IID, CanvasEffect::MakeEffectFunction> CanvasEffect::m_effectMakers[] 
     { DpiCompensationEffect::EffectId(),      MakeEffect<DpiCompensationEffect>      },
     { GammaTransferEffect::EffectId(),        MakeEffect<GammaTransferEffect>        },
     { GaussianBlurEffect::EffectId(),         MakeEffect<GaussianBlurEffect>         },
-    { HdrToneMapEffect::EffectId(),           MakeEffect<HdrToneMapEffect>           },
+    { HDRToneMapEffect::EffectId(),           MakeEffect<HDRToneMapEffect>           },
     { HueRotationEffect::EffectId(),          MakeEffect<HueRotationEffect>          },
     { LinearTransferEffect::EffectId(),       MakeEffect<LinearTransferEffect>       },
     { LuminanceToAlphaEffect::EffectId(),     MakeEffect<LuminanceToAlphaEffect>     },

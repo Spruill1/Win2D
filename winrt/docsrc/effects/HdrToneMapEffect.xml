@@ -23,7 +23,7 @@ Licensed under the MIT License. See LICENSE.txt in the project root for license 
           to be scRGB.
         </p>
         <!--<p>This Windows Runtime type corresponds to the 
-          <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/hh706378.aspx">D2D HDR Tone Map effect</a>.</p>  note - there is no current page up?
+          <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/hh706378.aspx">D2D Hdr Tone Map effect</a>.</p>  note - there is no current page up?
           -->
       </remarks>
     </member>
@@ -58,7 +58,7 @@ Licensed under the MIT License. See LICENSE.txt in the project root for license 
       <summary>Indicates tonemapping for an SDR target.</summary>
     </member>
     <member name="F:Microsoft.Graphics.Canvas.Effects.HdrToneMapEffectDisplayMode.DisplayModeHdr">
-      <summary>Indicates tonemapping for an HDR target.</summary>
+      <summary>Indicates tonemapping for an Hdr target.</summary>
     </member>
     
     <inherittemplate name="EffectTemplate" replacement="HdrToneMapEffect" />

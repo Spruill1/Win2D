@@ -221,7 +221,7 @@ namespace test.managed
                 var originalHdrValue = hdrProperty.GetValue(effect);
                 var originalColorValue = colorProperty.GetValue(effect);
 
-                // Verify that a value set to the color property is picked up on the HDR version of it
+                // Verify that a value set to the color property is picked up on the Hdr version of it
                 var color = Color.FromArgb(1, 2, 3, 4);
                 colorProperty.SetValue(effect, color);
 
@@ -240,7 +240,7 @@ namespace test.managed
 
                 Assert.AreEqual(expectedHdrColor, retrievedHdrColor);
 
-                // Verify that a value set to the HDR property is picked up on the non-HDR version.
+                // Verify that a value set to the Hdr property is picked up on the non-Hdr version.
                 var hdrColor = new Vector4
                 {
                     X = 0.2f,
@@ -256,7 +256,7 @@ namespace test.managed
                 var retrievedColor = (Color)colorProperty.GetValue(effect);
                 Assert.AreEqual(expectedColor, retrievedColor);
 
-                // Verify that the non-HDR properties are saturated when they return
+                // Verify that the non-Hdr properties are saturated when they return
                 hdrColor = new Vector4 { X = 1.0f, Y = 2.0f, Z = 3.0f, W = 4.0f };
                 hdrProperty.SetValue(effect, hdrColor);
                 hdrColor = (Vector4)hdrProperty.GetValue(effect);
@@ -952,10 +952,10 @@ namespace test.managed
             }
 #endif  // WINDOWS_UWP
 
-            // Remove any HDR properties
+            // Remove any Hdr properties
             var hdrProperties = properties.Where(p => p.Name.EndsWith("Hdr")).Select(p => p.Name);
 
-            // Sanity check that HDR properties have matching non-HDR version
+            // Sanity check that Hdr properties have matching non-Hdr version
             foreach (var p in hdrProperties)
             {
                 var nonHdr = p.Substring(0, p.Length - 3);

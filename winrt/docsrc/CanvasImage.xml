@@ -58,7 +58,7 @@ Licensed under the MIT License. See LICENSE.txt in the project root for license 
           cref="F:Microsoft.Graphics.Canvas.CanvasBufferPrecision.Precision8UIntNormalized"/>.
         </p>
         <p>
-          To save an image using a high dynamic range (HDR) pixel format, use
+          To save an image using a high dynamic range (Hdr) pixel format, use
           <see cref="F:Microsoft.Graphics.Canvas.CanvasBitmapFileFormat.JpegXR"/>
           format and specify one of the buffer precisions:
         </p>
@@ -124,7 +124,7 @@ Licensed under the MIT License. See LICENSE.txt in the project root for license 
 
   <template name="CanvasImage.SaveAsync-hdr">
     <p>
-      To save an image using a high dynamic range (HDR) pixel format, use
+      To save an image using a high dynamic range (Hdr) pixel format, use
       <see cref="M:Microsoft.Graphics.Canvas.CanvasImage.SaveAsync(Microsoft.Graphics.Canvas.ICanvasImage,Windows.Foundation.Rect,System.Single,Microsoft.Graphics.Canvas.ICanvasResourceCreator,Windows.Storage.Streams.IRandomAccessStream,Microsoft.Graphics.Canvas.CanvasBitmapFileFormat,System.Single,Microsoft.Graphics.Canvas.CanvasBufferPrecision)"/> with
       <see cref="F:Microsoft.Graphics.Canvas.CanvasBitmapFileFormat.JpegXR"/> format and a suitable
       <see cref="T:Microsoft.Graphics.Canvas.CanvasBufferPrecision"/>.

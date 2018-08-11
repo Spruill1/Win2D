@@ -7,16 +7,16 @@
 namespace Microsoft.Graphics.Canvas.Effects
 {
     [version(VERSION)]
-    typedef enum HdrToneMapEffectDisplayMode
+    typedef enum HDRToneMapEffectDisplayMode
     {
         SDR = 0,
         HDR = 1
-    } HdrToneMapEffectDisplayMode;
+    } HDRToneMapEffectDisplayMode;
 
-    runtimeclass HdrToneMapEffect;
+    runtimeclass HDRToneMapEffect;
 
-    [version(VERSION), uuid(E8DE30E9-8E50-5380-93DA-252F69AC5507), exclusiveto(HdrToneMapEffect)]
-    interface IHdrToneMapEffect : IInspectable
+    [version(VERSION), uuid(E8DE30E9-8E50-5380-93DA-252F69AC5507), exclusiveto(HDRToneMapEffect)]
+    interface IHDRToneMapEffect : IInspectable
         requires ICanvasEffect
     {
         [propget]
@@ -32,10 +32,10 @@ namespace Microsoft.Graphics.Canvas.Effects
         HRESULT OutputMaxLuminance([in] float value);
 
         [propget]
-        HRESULT DisplayMode([out, retval] HdrToneMapEffectDisplayMode* value);
+        HRESULT DisplayMode([out, retval] HDRToneMapEffectDisplayMode* value);
 
         [propput]
-        HRESULT DisplayMode([in] HdrToneMapEffectDisplayMode value);
+        HRESULT DisplayMode([in] HDRToneMapEffectDisplayMode value);
 
         [propget]
         HRESULT Source([out, retval] IGRAPHICSEFFECTSOURCE** source);
@@ -46,8 +46,8 @@ namespace Microsoft.Graphics.Canvas.Effects
     };
 
     [STANDARD_ATTRIBUTES, activatable(VERSION)]
-    runtimeclass HdrToneMapEffect
+    runtimeclass HDRToneMapEffect
     {
-        [default] interface IHdrToneMapEffect;
+        [default] interface IHDRToneMapEffect;
     }
 }

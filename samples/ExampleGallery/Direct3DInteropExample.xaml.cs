@@ -179,7 +179,7 @@ namespace ExampleGallery
             BloomEnabled = true;
 
             // A bloom filter makes graphics appear to be bright and glowing by adding blur around only
-            // the brightest parts of the image. This approximates the look of HDR (high dynamic range)
+            // the brightest parts of the image. This approximates the look of Hdr (high dynamic range)
             // rendering, in which the color of the brightest light sources spills over onto surrounding
             // pixels.
             //

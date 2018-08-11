@@ -11,21 +11,21 @@ namespace ABI { namespace Microsoft { namespace Graphics { namespace Canvas { na
     using namespace ::Microsoft::WRL;
     using namespace ABI::Microsoft::Graphics::Canvas;
 
-    class HdrToneMapEffect : public RuntimeClass<
-        IHdrToneMapEffect,
-        MixIn<HdrToneMapEffect, CanvasEffect>>,
+    class HDRToneMapEffect : public RuntimeClass<
+        IHDRToneMapEffect,
+        MixIn<HDRToneMapEffect, CanvasEffect>>,
         public CanvasEffect
     {
-        InspectableClass(RuntimeClass_Microsoft_Graphics_Canvas_Effects_HdrToneMapEffect, BaseTrust);
+        InspectableClass(RuntimeClass_Microsoft_Graphics_Canvas_Effects_HDRToneMapEffect, BaseTrust);
 
     public:
-        HdrToneMapEffect(ICanvasDevice* device = nullptr, ID2D1Effect* effect = nullptr);
+        HDRToneMapEffect(ICanvasDevice* device = nullptr, ID2D1Effect* effect = nullptr);
 
         static IID const& EffectId() { return CLSID_D2D1HDRToneMap; }
 
         EFFECT_PROPERTY(InputMaxLuminance, float);
         EFFECT_PROPERTY(OutputMaxLuminance, float);
-        EFFECT_PROPERTY(DisplayMode, HdrToneMapEffectDisplayMode);
+        EFFECT_PROPERTY(DisplayMode, HDRToneMapEffectDisplayMode);
         EFFECT_PROPERTY(Source, IGraphicsEffectSource*);
 
         EFFECT_PROPERTY_MAPPING();

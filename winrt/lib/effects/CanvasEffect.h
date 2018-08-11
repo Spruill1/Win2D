@@ -416,7 +416,7 @@ namespace ABI { namespace Microsoft { namespace Graphics { namespace Canvas { na
         };
 
 
-        // HDR color (Vector4) can be boxed as a float3 (for properties that only use rgb).
+        // Hdr color (Vector4) can be boxed as a float3 (for properties that only use rgb).
         template<>
         struct PropertyTypeConverter<ConvertColorHdrToVector3, Numerics::Vector4>
         {

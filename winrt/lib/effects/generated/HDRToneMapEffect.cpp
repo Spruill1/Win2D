@@ -5,12 +5,12 @@
 // This file was automatically generated. Please do not edit it manually.
 
 #include "pch.h"
-#include "HdrToneMapEffect.h"
+#include "HDRToneMapEffect.h"
 
 namespace ABI { namespace Microsoft { namespace Graphics { namespace Canvas { namespace Effects
 {
-    HdrToneMapEffect::HdrToneMapEffect(ICanvasDevice* device, ID2D1Effect* effect)
-        : CanvasEffect(EffectId(), 3, 1, true, device, effect, static_cast<IHdrToneMapEffect*>(this))
+    HDRToneMapEffect::HDRToneMapEffect(ICanvasDevice* device, ID2D1Effect* effect)
+        : CanvasEffect(EffectId(), 3, 1, true, device, effect, static_cast<IHDRToneMapEffect*>(this))
     {
         if (!effect)
         {
@@ -21,32 +21,32 @@ namespace ABI { namespace Microsoft { namespace Graphics { namespace Canvas { na
         }
     }
 
-    IMPLEMENT_EFFECT_PROPERTY(HdrToneMapEffect,
+    IMPLEMENT_EFFECT_PROPERTY(HDRToneMapEffect,
         InputMaxLuminance,
         float,
         float,
         D2D1_HDRTONEMAP_PROP_INPUT_MAX_LUMINANCE)
 
-    IMPLEMENT_EFFECT_PROPERTY(HdrToneMapEffect,
+    IMPLEMENT_EFFECT_PROPERTY(HDRToneMapEffect,
         OutputMaxLuminance,
         float,
         float,
         D2D1_HDRTONEMAP_PROP_OUTPUT_MAX_LUMINANCE)
 
-    IMPLEMENT_EFFECT_PROPERTY(HdrToneMapEffect,
+    IMPLEMENT_EFFECT_PROPERTY(HDRToneMapEffect,
         DisplayMode,
         uint32_t,
-        HdrToneMapEffectDisplayMode,
+        HDRToneMapEffectDisplayMode,
         D2D1_HDRTONEMAP_PROP_DISPLAY_MODE)
 
-    IMPLEMENT_EFFECT_SOURCE_PROPERTY(HdrToneMapEffect,
+    IMPLEMENT_EFFECT_SOURCE_PROPERTY(HDRToneMapEffect,
         Source,
         0)
 
-    IMPLEMENT_EFFECT_PROPERTY_MAPPING(HdrToneMapEffect,
+    IMPLEMENT_EFFECT_PROPERTY_MAPPING(HDRToneMapEffect,
         { L"InputMaxLuminance",  D2D1_HDRTONEMAP_PROP_INPUT_MAX_LUMINANCE,  GRAPHICS_EFFECT_PROPERTY_MAPPING_DIRECT },
         { L"OutputMaxLuminance", D2D1_HDRTONEMAP_PROP_OUTPUT_MAX_LUMINANCE, GRAPHICS_EFFECT_PROPERTY_MAPPING_DIRECT },
         { L"DisplayMode",        D2D1_HDRTONEMAP_PROP_DISPLAY_MODE,         GRAPHICS_EFFECT_PROPERTY_MAPPING_DIRECT })
 
-    ActivatableClassWithFactory(HdrToneMapEffect, SimpleAgileActivationFactory<HdrToneMapEffect>);
+    ActivatableClassWithFactory(HDRToneMapEffect, SimpleAgileActivationFactory<HDRToneMapEffect>);
 }}}}}

@@ -300,7 +300,7 @@ Licensed under the MIT License. See LICENSE.txt in the project root for license 
     <template name="CanvasBitmap.LoadAsync-hdr">
       <p>
         When loading a <see cref="F:Microsoft.Graphics.Canvas.CanvasBitmapFileFormat.JpegXR"/>
-        format bitmap that contains high dynamic range (HDR) pixel data, the loaded bitmap
+        format bitmap that contains high dynamic range (Hdr) pixel data, the loaded bitmap
         may use one of the pixel formats:
       </p>
       <ul>
@@ -352,7 +352,7 @@ Licensed under the MIT License. See LICENSE.txt in the project root for license 
 
     <template name="CanvasBitmap.SaveAsync-hdr">
       <p>
-        To save image data using a high dynamic range (HDR) pixel format, use
+        To save image data using a high dynamic range (Hdr) pixel format, use
         <see cref="F:Microsoft.Graphics.Canvas.CanvasBitmapFileFormat.JpegXR"/>
         format and provide a bitmap using one of the pixel formats:
       </p>
