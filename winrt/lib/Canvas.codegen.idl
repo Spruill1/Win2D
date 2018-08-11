@@ -27,7 +27,8 @@ namespace Microsoft.Graphics.Canvas
         SourceOver = (int)0,
         Copy = (int)1,
         Min = (int)2,
-        Add = (int)3
+        Add = (int)3,
+        Max = (int)4
     } CanvasBlend;
 
     [version(VERSION)]

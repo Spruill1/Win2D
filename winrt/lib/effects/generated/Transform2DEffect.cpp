@@ -15,8 +15,8 @@ namespace ABI { namespace Microsoft { namespace Graphics { namespace Canvas { na
         if (!effect)
         {
             // Set default values
-            SetBoxedProperty<uint32_t>(D2D1_2DAFFINETRANSFORM_PROP_INTERPOLATION_MODE, D2D1_2DAFFINETRANSFORM_INTERPOLATION_MODE_LINEAR);
-            SetBoxedProperty<uint32_t>(D2D1_2DAFFINETRANSFORM_PROP_BORDER_MODE, D2D1_BORDER_MODE_SOFT);
+            SetBoxedProperty<uint32_t>(D2D1_2DAFFINETRANSFORM_PROP_INTERPOLATION_MODE, D2D1_INTERPOLATION_MODE_LINEAR);
+            SetBoxedProperty<uint32_t>(D2D1_2DAFFINETRANSFORM_PROP_BORDER_MODE, EffectBorderMode::Soft);
             SetBoxedProperty<float[6]>(D2D1_2DAFFINETRANSFORM_PROP_TRANSFORM_MATRIX, Numerics::Matrix3x2{ 1, 0, 0, 1, 0, 0 });
             SetBoxedProperty<float>(D2D1_2DAFFINETRANSFORM_PROP_SHARPNESS, 0.0f);
         }

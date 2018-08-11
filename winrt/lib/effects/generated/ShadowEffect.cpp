@@ -17,7 +17,7 @@ namespace ABI { namespace Microsoft { namespace Graphics { namespace Canvas { na
             // Set default values
             SetBoxedProperty<float>(D2D1_SHADOW_PROP_BLUR_STANDARD_DEVIATION, 3.0f);
             SetBoxedProperty<float[4]>(D2D1_SHADOW_PROP_COLOR, Color{ 255, 0, 0, 0 });
-            SetBoxedProperty<uint32_t>(D2D1_SHADOW_PROP_OPTIMIZATION, D2D1_SHADOW_OPTIMIZATION_BALANCED);
+            SetBoxedProperty<uint32_t>(D2D1_SHADOW_PROP_OPTIMIZATION, EffectOptimization::Balanced);
         }
     }
 

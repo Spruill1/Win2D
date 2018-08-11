@@ -24,7 +24,7 @@ namespace ABI { namespace Microsoft { namespace Graphics { namespace Canvas { na
             SetBoxedProperty<float>(D2D1_SPOTSPECULAR_PROP_SURFACE_SCALE, 1.0f);
             SetBoxedProperty<float[3]>(D2D1_SPOTSPECULAR_PROP_COLOR, Color{ 255, 255, 255, 255 });
             SetBoxedProperty<float[2]>(D2D1_SPOTSPECULAR_PROP_KERNEL_UNIT_LENGTH, Numerics::Vector2{ 1.0f, 1.0f });
-            SetBoxedProperty<uint32_t>(D2D1_SPOTSPECULAR_PROP_SCALE_MODE, D2D1_SPOTSPECULAR_SCALE_MODE_LINEAR);
+            SetBoxedProperty<uint32_t>(D2D1_SPOTSPECULAR_PROP_SCALE_MODE, D2D1_INTERPOLATION_MODE_LINEAR);
         }
     }
 

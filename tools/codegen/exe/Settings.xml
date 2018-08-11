@@ -299,5 +299,14 @@ Licensed under the MIT License. See LICENSE.txt in the project root for license 
     </Effect>
     <Effect Name="OpacityEffect" WinVer="_WIN32_WINNT_WIN10" IsSupportedCheck="ID2D1Factory5"/>
     <Effect Name="TintEffect" WinVer="_WIN32_WINNT_WIN10" IsSupportedCheck="ID2D1Factory5"/>
+    <Effect Name="WhiteLevelAdjustment" WinVer="_WIN32_WINNT_WIN10">
+      <Property Name="InputWhiteLevel" ProjectedNameOverride="InputWhiteLevel"/>
+      <Property Name="OutputWhiteLevel" ProjectedNameOverride="OutputWhiteLevel"/>
+    </Effect>
+    <Effect Name="HdrToneMap" WinVer="_WIN32_WINNT_WIN10">
+      <Property Name="InputMaxWhiteLevel" ProjectedNameOverride="InputMaxWhiteLevel"/>
+      <Property Name="OutputMaxWhiteLevel" ProjectedNameOverride="OutputMaxWhiteLevel"/>
+      <Property Name="OptimizeForHdrDisplay" ProjectedNameOverride="OptimizeForHdrDisplay"/>
+    </Effect>
   </Namespace>
 </Settings>

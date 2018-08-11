@@ -25,6 +25,7 @@
 #include "DpiCompensationEffect.h"
 #include "GammaTransferEffect.h"
 #include "GaussianBlurEffect.h"
+#include "HdrToneMapEffect.h"
 #include "HueRotationEffect.h"
 #include "LinearTransferEffect.h"
 #include "LuminanceToAlphaEffect.h"
@@ -44,6 +45,7 @@
 #include "Transform3DEffect.h"
 #include "TurbulenceEffect.h"
 #include "UnPremultiplyEffect.h"
+#include "WhiteLevelAdjustmentEffect.h"
 
 #if (defined _WIN32_WINNT_WIN10) && (WINVER >= _WIN32_WINNT_WIN10)
 
@@ -93,6 +95,7 @@ std::pair<IID, CanvasEffect::MakeEffectFunction> CanvasEffect::m_effectMakers[] 
     { DpiCompensationEffect::EffectId(),      MakeEffect<DpiCompensationEffect>      },
     { GammaTransferEffect::EffectId(),        MakeEffect<GammaTransferEffect>        },
     { GaussianBlurEffect::EffectId(),         MakeEffect<GaussianBlurEffect>         },
+    { HdrToneMapEffect::EffectId(),           MakeEffect<HdrToneMapEffect>           },
     { HueRotationEffect::EffectId(),          MakeEffect<HueRotationEffect>          },
     { LinearTransferEffect::EffectId(),       MakeEffect<LinearTransferEffect>       },
     { LuminanceToAlphaEffect::EffectId(),     MakeEffect<LuminanceToAlphaEffect>     },
@@ -112,6 +115,7 @@ std::pair<IID, CanvasEffect::MakeEffectFunction> CanvasEffect::m_effectMakers[] 
     { Transform3DEffect::EffectId(),          MakeEffect<Transform3DEffect>          },
     { TurbulenceEffect::EffectId(),           MakeEffect<TurbulenceEffect>           },
     { UnPremultiplyEffect::EffectId(),        MakeEffect<UnPremultiplyEffect>        },
+    { WhiteLevelAdjustmentEffect::EffectId(), MakeEffect<WhiteLevelAdjustmentEffect> },
 
 #if (defined _WIN32_WINNT_WIN10) && (WINVER >= _WIN32_WINNT_WIN10)
 

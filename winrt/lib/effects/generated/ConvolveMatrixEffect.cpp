@@ -16,7 +16,7 @@ namespace ABI { namespace Microsoft { namespace Graphics { namespace Canvas { na
         {
             // Set default values
             SetBoxedProperty<float[2]>(D2D1_CONVOLVEMATRIX_PROP_KERNEL_UNIT_LENGTH, Numerics::Vector2{ 1.0f, 1.0f });
-            SetBoxedProperty<uint32_t>(D2D1_CONVOLVEMATRIX_PROP_SCALE_MODE, D2D1_CONVOLVEMATRIX_SCALE_MODE_LINEAR);
+            SetBoxedProperty<uint32_t>(D2D1_CONVOLVEMATRIX_PROP_SCALE_MODE, D2D1_INTERPOLATION_MODE_LINEAR);
             SetBoxedProperty<int32_t>(D2D1_CONVOLVEMATRIX_PROP_KERNEL_SIZE_X, 3);
             SetBoxedProperty<int32_t>(D2D1_CONVOLVEMATRIX_PROP_KERNEL_SIZE_Y, 3);
             SetArrayProperty<float>(D2D1_CONVOLVEMATRIX_PROP_KERNEL_MATRIX, { 0, 0, 0, 0, 1, 0, 0, 0, 0 });
@@ -24,7 +24,7 @@ namespace ABI { namespace Microsoft { namespace Graphics { namespace Canvas { na
             SetBoxedProperty<float>(D2D1_CONVOLVEMATRIX_PROP_BIAS, 0.0f);
             SetBoxedProperty<float[2]>(D2D1_CONVOLVEMATRIX_PROP_KERNEL_OFFSET, Numerics::Vector2{ 0.0f, 0.0f });
             SetBoxedProperty<boolean>(D2D1_CONVOLVEMATRIX_PROP_PRESERVE_ALPHA, static_cast<boolean>(false));
-            SetBoxedProperty<uint32_t>(D2D1_CONVOLVEMATRIX_PROP_BORDER_MODE, D2D1_BORDER_MODE_SOFT);
+            SetBoxedProperty<uint32_t>(D2D1_CONVOLVEMATRIX_PROP_BORDER_MODE, EffectBorderMode::Soft);
             SetBoxedProperty<boolean>(D2D1_CONVOLVEMATRIX_PROP_CLAMP_OUTPUT, static_cast<boolean>(false));
         }
     }

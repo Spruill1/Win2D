@@ -16,6 +16,11 @@
 #include <lib/effects/generated/TintEffect.h>
 #endif
 
+#if NTDDI_VERSION >= NTDDI_WIN10_RS5
+#include <lib/effects/generated/HdrToneMapEffect.h>
+#include <lib/effects/generated/WhiteLevelAdjustmentEffect.h>
+#endif
+
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 TEST_CLASS(CanvasEffectUnitTest)

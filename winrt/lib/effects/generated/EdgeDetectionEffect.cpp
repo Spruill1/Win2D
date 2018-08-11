@@ -19,9 +19,9 @@ namespace ABI { namespace Microsoft { namespace Graphics { namespace Canvas { na
             // Set default values
             SetBoxedProperty<float>(D2D1_EDGEDETECTION_PROP_STRENGTH, 0.5f);
             SetBoxedProperty<float>(D2D1_EDGEDETECTION_PROP_BLUR_RADIUS, 0.0f);
-            SetBoxedProperty<uint32_t>(D2D1_EDGEDETECTION_PROP_MODE, EdgeDetectionEffectMode::Sobel);
+            SetBoxedProperty<uint32_t>(D2D1_EDGEDETECTION_PROP_MODE, D2D1_EDGEDETECTION_MODE_SOBEL);
             SetBoxedProperty<boolean>(D2D1_EDGEDETECTION_PROP_OVERLAY_EDGES, static_cast<boolean>(false));
-            SetBoxedProperty<uint32_t>(D2D1_EDGEDETECTION_PROP_ALPHA_MODE, D2D1_COLORMANAGEMENT_ALPHA_MODE_PREMULTIPLIED);
+            SetBoxedProperty<uint32_t>(D2D1_EDGEDETECTION_PROP_ALPHA_MODE, CanvasAlphaMode::Straight);
         }
     }
 

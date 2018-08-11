@@ -60,12 +60,7 @@ Licensed under the MIT License. See LICENSE.txt in the project root for license 
          </Method>
        </Interface>     
 
-       <!-- Revised=true attribute in Interface element indicates that EACH implementation of the base interface implements this interface too.
-            The D2D debug layer relies on that assumption and may upcast base interface pointer and call new interface method without QueryInterface validation!
-            
-            It is expected that some ID2D1CommandSink objects do not provide ID2D1CommandSink1 implementation. That is why this is not a revised interface.
-       -->
-        <Interface Name="ICommandSink1" Extends="D2D1::ICommandSink" IID="9eb767fd-4269-4467-b8c2-eb30cb305743" WrapOutgoing="true" ShouldTestQI="false" Revised="false" HasD2DImplementation="false" Comment="This interface performs all the same functions as the existing ID2D1CommandSink interface. It also enables access to the new primitive blend modes, MIN and ADD, through its SetPrimitiveBlend1 method.">
+        <Interface Name="ICommandSink1" Extends="D2D1::ICommandSink" IID="9eb767fd-4269-4467-b8c2-eb30cb305743" WrapOutgoing="true" ShouldTestQI="false" HasD2DImplementation="false" Comment="This interface performs all the same functions as the existing ID2D1CommandSink interface. It also enables access to the new primitive blend modes, MIN and ADD, through its SetPrimitiveBlend1 method.">
             <Method Name="SetPrimitiveBlend1" Comment="This method is called if primitiveBlend value was added after Windows 8. SetPrimitiveBlend method is used for Win8 values (_SOURCE_OVER and _COPY).">
                 <Parameter Name="primitiveBlend" Type="D2D1::PRIMITIVE_BLEND" Form="value" />
             </Method>

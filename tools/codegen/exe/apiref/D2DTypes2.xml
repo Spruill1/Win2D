@@ -263,8 +263,13 @@ Licensed under the MIT License. See LICENSE.txt in the project root for license 
         <Enum Name="PRIMITIVE_BLEND" Comment="A blend mode that applies to all primitives drawn on the context.">
             <Field Name="SOURCE_OVER" Value="0" />
             <Field Name="COPY" Value="1" />
+            
+            <!-- Added in Windows 8 -->
             <Field Name="MIN" Value="2" />
             <Field Name="ADD" Value="3" />
+            
+            <!-- Added in RS2 -->
+            <Field Name="MAX" Value="4" />
         </Enum>
 
         <Enum Name="LAYER_OPTIONS1" IsFlags="true" Comment="Specifies how the layer contents should be prepared.">
@@ -848,7 +853,7 @@ Licensed under the MIT License. See LICENSE.txt in the project root for license 
 
         </Interface>
 
-        <Interface Name="IPathGeometry1" Extends="D2D1::IPathGeometry" Revised="true" IID="62baa2d2-ab54-41b7-b872-787e0106a421" ShouldTestQI="true" QIFromBase="true" Comment="The ID2D1PathGeometry1 interface adds functionality to ID2D1PathGeometry. In particular, it provides the path geometry-specific ComputePointAndSegmentAtLength method.">
+        <Interface Name="IPathGeometry1" Extends="D2D1::IPathGeometry" IID="62baa2d2-ab54-41b7-b872-787e0106a421" ShouldTestQI="true" QIFromBase="true" Comment="The ID2D1PathGeometry1 interface adds functionality to ID2D1PathGeometry. In particular, it provides the path geometry-specific ComputePointAndSegmentAtLength method.">
             <Method Name="ComputePointAndSegmentAtLength" IsConst="true" LockingModel="Local">
                 <Parameter Name="length" Type="FLOAT" />
                 <Parameter Name="startSegment" Type="UINT32" />
@@ -906,7 +911,7 @@ Licensed under the MIT License. See LICENSE.txt in the project root for license 
             </Method>
        </Interface>
      
-       <Interface Name="IGradientStopCollection1" Extends="D2D1::IGradientStopCollection" Revised="true" ShouldTestQI="true" QIFromBase="true" Comment="Represents an collection of gradient stops that can then be the source resource for either a linear or radial gradient brush." IID="ae1572f4-5dd0-4777-998b-9279472ae63b">
+       <Interface Name="IGradientStopCollection1" Extends="D2D1::IGradientStopCollection" ShouldTestQI="true" QIFromBase="true" Comment="Represents an collection of gradient stops that can then be the source resource for either a linear or radial gradient brush." IID="ae1572f4-5dd0-4777-998b-9279472ae63b">
             <Method Name="GetGradientStops1" Return="void" IsConst="true" Comment="Copies the gradient stops from the collection into the caller's memory. If this object was created using ID2D1DeviceContext::CreateGradientStopCollection, this method returns the same values as were specified in the creation method. If this object was created using ID2D1RenderTarget::CreateGradientStopCollection, the stops returned here will first be transformed into the gamma space specified by the colorInterpolationGamma parameter.">
                 <Parameter Name="gradientStops" Type="D2D1::GRADIENT_STOP" Form="out pointer inexpressibleArray" IsArray="true" IsRetval="true" OutArrayLength="GetGradientStopCount()" />
             </Method>
@@ -916,7 +921,7 @@ Licensed under the MIT License. See LICENSE.txt in the project root for license 
             <Method Name="GetColorInterpolationMode" Return="D2D1::COLOR_INTERPOLATION_MODE" IsConst="true" Comment="Returns the interpolation mode used to interpolate colors in the gradient." />
         </Interface>
 
-        <Interface Name="IDrawingStateBlock1" Extends="D2D1::IDrawingStateBlock" Revised="true" Comment="Represents drawing state." IID="689f1f85-c72e-4e33-8f19-85754efd5ace" ShouldTestQI="true" QIFromBase="true">
+        <Interface Name="IDrawingStateBlock1" Extends="D2D1::IDrawingStateBlock" Comment="Represents drawing state." IID="689f1f85-c72e-4e33-8f19-85754efd5ace" ShouldTestQI="true" QIFromBase="true">
             <Method Name="GetDescription" IsConst="true" Return="void" Comment="Retrieves the state currently contained within this state block resource.">
                 <Parameter Name="stateDescription" Type="D2D1::DRAWING_STATE_DESCRIPTION1" Form="out pointer" IsRetval="true" />
             </Method>
@@ -1067,7 +1072,7 @@ Licensed under the MIT License. See LICENSE.txt in the project root for license 
 
         </Interface>
 
-         <Interface Name="IStrokeStyle1" Extends="D2D1::IStrokeStyle" ShouldTestQI="true" Revised="true" Comment="Extends a stroke style to allow nominal width strokes." IID="10a72a66-e91c-43f4-993f-ddf4b82b0b4a" QIFromBase="true">
+         <Interface Name="IStrokeStyle1" Extends="D2D1::IStrokeStyle" ShouldTestQI="true" Comment="Extends a stroke style to allow nominal width strokes." IID="10a72a66-e91c-43f4-993f-ddf4b82b0b4a" QIFromBase="true">
            <Method Name="GetStrokeTransformType" IsConst="true" Return="D2D1::STROKE_TRANSFORM_TYPE" />
          </Interface>
 

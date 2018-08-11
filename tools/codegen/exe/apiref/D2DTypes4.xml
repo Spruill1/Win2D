@@ -129,7 +129,36 @@ Licensed under the MIT License. See LICENSE.txt in the project root for license 
             <Field Name="SIMPLE" Value="1" />
             <Field Name="DXGI" Value="2" />
         </Enum>
-
+        
+       <Enum Name="BLEND_MODE">
+            <Field Name="MULTIPLY" Value="0" />
+            <Field Name="SCREEN" Value="1" />
+            <Field Name="DARKEN" Value="2" />
+            <Field Name="LIGHTEN" Value="3" />
+            <Field Name="DISSOLVE" Value="4" />
+            <Field Name="COLOR_BURN" Value="5" />
+            <Field Name="LINEAR_BURN" Value="6" />
+            <Field Name="DARKER_COLOR" Value="7" />
+            <Field Name="LIGHTER_COLOR" Value="8" />
+            <Field Name="COLOR_DODGE" Value="9" />
+            <Field Name="LINEAR_DODGE" Value="10" />
+            <Field Name="OVERLAY" Value="11" />
+            <Field Name="SOFT_LIGHT" Value="12" />
+            <Field Name="HARD_LIGHT" Value="13" />
+            <Field Name="VIVID_LIGHT" Value="14" />
+            <Field Name="LINEAR_LIGHT" Value="15" />
+            <Field Name="PIN_LIGHT" Value="16" />
+            <Field Name="HARD_MIX" Value="17" />
+            <Field Name="DIFFERENCE" Value="18" />
+            <Field Name="EXCLUSION" Value="19" />
+            <Field Name="HUE" Value="20" />
+            <Field Name="SATURATION" Value="21" />
+            <Field Name="COLOR" Value="22" />
+            <Field Name="LUMINOSITY" Value="23" />
+            <Field Name="SUBTRACT" Value="24" />
+            <Field Name="DIVISION" Value="25" />
+       </Enum>
+       
         <Interface Name="IImageSource" Extends="D2D1::IImage" IID="c9b664e5-74a1-4378-9ac2-eefc37a3f4d8" Comment="Represents a producer of pixels that can fill an arbitrary 2D plane.">
             <Method Name="OfferResources" />
             <Method Name="TryReclaimResources">    
@@ -334,12 +363,12 @@ Licensed under the MIT License. See LICENSE.txt in the project root for license 
                 <Parameter Name="wicBitmapSource" Type="IWICBitmapSource" Form="pointer" />
                 <Parameter Name="loadingOptions" Type="D2D1::IMAGE_SOURCE_LOADING_OPTIONS" />
                 <Parameter Name="imageSource" Type="D2D1::IImageSourceFromWic" Form="deref out pointer com" />
-            </Method>	
+            </Method>   
             
             <Method Name="CreateImageSourceFromWic" OverloadId="2">
                 <Parameter Name="wicBitmapSource" Type="IWICBitmapSource" Form="pointer" />
                 <Parameter Name="imageSource" Type="D2D1::IImageSourceFromWic" Form="deref out pointer com" />
-            </Method>	
+            </Method>   
 
             <Method Name="CreateLookupTable3D" Comment="Creates a 3D lookup table for mapping a 3-channel input to a 3-channel output. The table data must be provided in 4-channel format.">
                 <Parameter Name="precision" Type="D2D1::BUFFER_PRECISION" />
@@ -396,7 +425,7 @@ Licensed under the MIT License. See LICENSE.txt in the project root for license 
             </Method>
         </Interface>
 
-        <Interface Name="ICommandSink2" Extends="D2D1::ICommandSink1" IID="3bab440e-417e-47df-a2e2-bc0be6a00916" WrapOutgoing="true" ShouldTestQI="false" Revised="false" HasD2DImplementation="false" Comment="This interface performs all the same functions as the existing ID2D1CommandSink1 interface. It also enables access to ink rendering and gradient mesh rendering.">
+        <Interface Name="ICommandSink2" Extends="D2D1::ICommandSink1" IID="3bab440e-417e-47df-a2e2-bc0be6a00916" WrapOutgoing="true" ShouldTestQI="false" HasD2DImplementation="false" Comment="This interface performs all the same functions as the existing ID2D1CommandSink1 interface. It also enables access to ink rendering and gradient mesh rendering.">
 
             <Method Name="DrawInk">
                 <Parameter Name="ink" Type="D2D1::IInk" Form="pointer" />
@@ -510,7 +539,7 @@ Licensed under the MIT License. See LICENSE.txt in the project root for license 
             </Method>
         </Interface>
 
-        <Interface Name="ICommandSink3" Extends="D2D1::ICommandSink2" IID="18079135-4cf3-4868-bc8e-06067e6d242d" WrapOutgoing="true" ShouldTestQI="false" Revised="false" HasD2DImplementation="false">
+        <Interface Name="ICommandSink3" Extends="D2D1::ICommandSink2" IID="18079135-4cf3-4868-bc8e-06067e6d242d" WrapOutgoing="true" ShouldTestQI="false" HasD2DImplementation="false">
             <Method Name="DrawSpriteBatch">
                 <Parameter Name="spriteBatch" Type="D2D1::ISpriteBatch" Form="pointer" />
                 <Parameter Name="startIndex" Type="UINT32" />
@@ -708,7 +737,7 @@ Licensed under the MIT License. See LICENSE.txt in the project root for license 
             </Method>
         </Interface>
         
-        <Interface Name="ICommandSink4" Extends="D2D1::ICommandSink3" IID="c78a6519-40d6-4218-b2de-beeeb744bb3e" WrapOutgoing="true" ShouldTestQI="false" Revised="false" HasD2DImplementation="false" >
+        <Interface Name="ICommandSink4" Extends="D2D1::ICommandSink3" IID="c78a6519-40d6-4218-b2de-beeeb744bb3e" WrapOutgoing="true" ShouldTestQI="false" HasD2DImplementation="false" >
             <Method Name="SetPrimitiveBlend2" Comment="
                 A new function to set blend mode that respects the new MAX blend.
                 
@@ -772,6 +801,37 @@ Licensed under the MIT License. See LICENSE.txt in the project root for license 
             <Method Name="CreateDevice" Comment="This creates a new Direct2D device from the given IDXGIDevice.">
                 <Parameter Name="dxgiDevice" Type="IDXGIDevice" Form="pointer" />
                 <Parameter Name="d2dDevice5" Type="D2D1::IDevice5" Form="deref out pointer com" IsRetval="true" />
+            </Method>
+        </Interface>
+        <Interface Name="IDevice6" Extends="D2D1::IDevice5" IID="7bfef914-2d75-4bad-be87-e18ddb077b6d" ShouldTestQI="true" QIFromBase="true">
+            <Method Name="CreateDeviceContext" Comment="Creates a new device context with no initially assigned target.">
+                <Parameter Name="options" Type="D2D1::DEVICE_CONTEXT_OPTIONS" Form="value" />
+                <Parameter Name="deviceContext6" Type="D2D1::IDeviceContext6" Form="deref out pointer com" IsRetval="true" />
+            </Method>
+        </Interface>
+
+        <Interface Name="IFactory7" Extends="D2D1::IFactory6" IID="bdc2bdd3-b96c-4de6-bdf7-99d4745454de" ShouldTestQI="true" QIFromBase="true" Comment="Creates Direct2D resources. This interface also enables the creation of ID2D1Device6 objects.">
+            <Method Name="CreateDevice" Comment="This creates a new Direct2D device from the given IDXGIDevice.">
+                <Parameter Name="dxgiDevice" Type="IDXGIDevice" Form="pointer" />
+                <Parameter Name="d2dDevice6" Type="D2D1::IDevice6" Form="deref out pointer com" IsRetval="true" />
+            </Method>
+        </Interface>  
+        <Interface Name="IDeviceContext6" Extends="D2D1::IDeviceContext5" IID="985f7e37-4ed0-4a19-98a3-15b0edfde306" QIFromBase="true">
+            <Method Name="BlendImage" Return="void" Comment="Draw an image to the device context.">
+                <Parameter Name="image" Type="D2D1::IImage" Form="pointer" />
+                <Parameter Name="blendMode" Type="D2D1::BLEND_MODE" />
+                <Parameter Name="targetOffset" Type="D2D1::POINT_2F" Form="pointer opt" Default="NULL" />
+                <Parameter Name="imageRectangle" Type="D2D1::RECT_F" Form="pointer opt" Default="NULL" />
+                <Parameter Name="interpolationMode" Type="D2D1::INTERPOLATION_MODE" Default="D2D1_INTERPOLATION_MODE_LINEAR" />
+            </Method>
+        </Interface>  
+        <Interface Name="ICommandSink5" Extends="D2D1::ICommandSink4" IID="7047dd26-b1e7-44a7-959a-8349e2144fa8" WrapOutgoing="true" ShouldTestQI="false" HasD2DImplementation="false" >
+            <Method Name="BlendImage">
+                <Parameter Name="image" Type="D2D1::IImage" Form="pointer" />
+                <Parameter Name="blendMode" Type="D2D1::BLEND_MODE" />
+                <Parameter Name="targetOffset" Type="D2D1::POINT_2F" Form="pointer opt" />
+                <Parameter Name="imageRectangle" Type="D2D1::RECT_F" Form="pointer opt" />
+                <Parameter Name="interpolationMode" Type="D2D1::INTERPOLATION_MODE" />
             </Method>
         </Interface>
     </Namespace>

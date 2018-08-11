@@ -20,7 +20,7 @@ namespace ABI { namespace Microsoft { namespace Graphics { namespace Canvas { na
             SetBoxedProperty<float[2]>(D2D1_TURBULENCE_PROP_BASE_FREQUENCY, Numerics::Vector2{ 0.01f, 0.01f });
             SetBoxedProperty<int32_t>(D2D1_TURBULENCE_PROP_NUM_OCTAVES, 1);
             SetBoxedProperty<int32_t>(D2D1_TURBULENCE_PROP_SEED, 0);
-            SetBoxedProperty<uint32_t>(D2D1_TURBULENCE_PROP_NOISE, D2D1_TURBULENCE_NOISE_FRACTAL_SUM);
+            SetBoxedProperty<uint32_t>(D2D1_TURBULENCE_PROP_NOISE, TurbulenceEffectNoise::FractalSum);
             SetBoxedProperty<boolean>(D2D1_TURBULENCE_PROP_STITCHABLE, static_cast<boolean>(false));
         }
     }

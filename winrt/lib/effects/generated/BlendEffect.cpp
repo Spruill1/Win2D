@@ -15,7 +15,7 @@ namespace ABI { namespace Microsoft { namespace Graphics { namespace Canvas { na
         if (!effect)
         {
             // Set default values
-            SetBoxedProperty<uint32_t>(D2D1_BLEND_PROP_MODE, D2D1_BLEND_MODE_MULTIPLY);
+            SetBoxedProperty<uint32_t>(D2D1_BLEND_PROP_MODE, BlendEffectMode::Multiply);
         }
     }
 

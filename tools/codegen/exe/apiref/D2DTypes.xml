@@ -9,8 +9,10 @@ Licensed under the MIT License. See LICENSE.txt in the project root for license 
     <FileDependency Name="D2DTypes2.xml" />
     <FileDependency Name="D2DEffectAuthor.xml" />
     <FileDependency Name="D2DTypesP.xml" /> 
+    <FileDependency Name="D2DEffectAuthorP.xml" />
     <FileDependency Name="D2DTestTypes.xml" /> 
     <FileDependency Name="D2DTypes3.xml" />
+    <FileDependency Name="D2DSvgTypes.xml" />
     <FileDependency Name="D2DTypes4.xml" />
     <FileDependency Name="D2DEffectAuthor1.xml" />
 
@@ -1510,7 +1512,8 @@ Licensed under the MIT License. See LICENSE.txt in the project root for license 
 
         <Interface Name="IFactory" Extends="IUnknown" IID="06152247-6f50-465a-9245-118bfd3b6007" Comment="The root factory interface for all of D2D's objects.">
             <Method Name="ReloadSystemMetrics" Comment="Cause the factory to refresh any system metrics that it might have been snapped on factory creation." />
-            <Method Name="GetDesktopDpi" Return="void" Comment="Retrieves the current desktop DPI. To refresh this, call ReloadSystemMetrics.">
+            <Method Name="GetDesktopDpi" Return="void" Comment="Retrieves the current desktop DPI. To refresh this, call ReloadSystemMetrics. 
+            Note: this method is deprecated. Use DisplayProperties::LogicalDpi for Windows Store Apps and GetDpiForWindow for Win32 Apps.">
                 <Parameter Name="dpiX" Type="FLOAT" Form="out pointer" />
                 <Parameter Name="dpiY" Type="FLOAT" Form="out pointer" />
             </Method>

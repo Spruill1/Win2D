@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!--
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+Licensed under the MIT License. See LICENSE.txt in the project root for license information.
+-->
+
+<doc>
+  <assembly>
+    <name>Microsoft.Graphics.Canvas</name>
+  </assembly>
+
+  <members>
+
+    <member name="T:Microsoft.Graphics.Canvas.Effects.WhiteLevelAdjustmentEffect" NoComposition="true">
+      <summary>
+        Adjusts the whitepoint of an image.
+      </summary>
+      <!--<remarks>
+        <p>
+          This Windows Runtime type corresponds to the
+          <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/dn900464.aspx">D2D WhiteLevelAdjustment effect</a>.
+        </p> 
+      </remarks>-->
+    </member>
+    <member name="M:Microsoft.Graphics.Canvas.Effects.WhiteLevelAdjustmentEffect.#ctor">
+      <summary>Initializes a new instance of the WhiteLevelAdjustmentEffect class.</summary>
+    </member>
+    <member name="P:Microsoft.Graphics.Canvas.Effects.WhiteLevelAdjustmentEffect.Source">
+      <summary>Gets or sets the input source for WhiteLevelAdjustment effect.</summary>
+      <remarks>
+        This property is initialized to null.
+      </remarks>
+    </member>
+    <member name="P:Microsoft.Graphics.Canvas.Effects.WhiteLevelAdjustmentEffect.InputWhiteLevel">
+      <summary>Specifies the input white level in nits.</summary>
+    </member>
+    <member name="P:Microsoft.Graphics.Canvas.Effects.WhiteLevelAdjustmentEffect.OutputWhiteLevel">
+      <summary>Specifies the output white level in nits.</summary>
+    </member>
+
+    <inherittemplate name="EffectTemplate" replacement="WhiteLevelAdjustmentEffect" />
+    <inherittemplate name="ICanvasEffectTemplate" replacement="WhiteLevelAdjustmentEffect" />
+
+  </members>
+</doc>

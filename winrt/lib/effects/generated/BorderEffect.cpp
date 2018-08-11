@@ -15,8 +15,8 @@ namespace ABI { namespace Microsoft { namespace Graphics { namespace Canvas { na
         if (!effect)
         {
             // Set default values
-            SetBoxedProperty<uint32_t>(D2D1_BORDER_PROP_EDGE_MODE_X, D2D1_BORDER_EDGE_MODE_CLAMP);
-            SetBoxedProperty<uint32_t>(D2D1_BORDER_PROP_EDGE_MODE_Y, D2D1_BORDER_EDGE_MODE_CLAMP);
+            SetBoxedProperty<uint32_t>(D2D1_BORDER_PROP_EDGE_MODE_X, CanvasEdgeBehavior::Clamp);
+            SetBoxedProperty<uint32_t>(D2D1_BORDER_PROP_EDGE_MODE_Y, CanvasEdgeBehavior::Clamp);
         }
     }
 

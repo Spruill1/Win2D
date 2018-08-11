@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!--
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+Licensed under the MIT License. See LICENSE.txt in the project root for license information.
+-->
+
+<doc>
+  <assembly>
+    <name>Microsoft.Graphics.Canvas</name>
+  </assembly>
+  <members>
+  
+    <member name="T:Microsoft.Graphics.Canvas.Effects.HdrToneMapEffect" NoComposition="true">
+      <summary>
+        Tonemaps a source image based on starting and final luminance data.
+      </summary>
+      <remarks>
+        <p>
+          The Turbulence effect computes adjusts the maximum luminance of the source image 
+          to fit within the maximum output luminance supported. Input and output luminance 
+          values are specified in nits. Note that the color space of the image is assumed 
+          to be scRGB.
+        </p>
+        <!--<p>This Windows Runtime type corresponds to the 
+          <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/hh706378.aspx">D2D HDR Tone Map effect</a>.</p>  note - there is no current page up?
+          -->
+      </remarks>
+    </member>
+    <member name="M:Microsoft.Graphics.Canvas.Effects.HdrToneMapEffect.#ctor">
+      <summary>Initializes a new instance of the HdrToneMapEffect class.</summary>
+    </member>
+    <member name="P:Microsoft.Graphics.Canvas.Effects.HdrToneMapEffect.Source">
+      <summary>Gets or sets the input source for HdrToneMap effect.</summary>
+      <remarks>
+        This property is initialized to null.
+      </remarks>
+    </member>
+    <member name="P:Microsoft.Graphics.Canvas.Effects.HdrToneMapEffect.InputMaxLuminance">
+      <summary>Specifies the input luminance level in nits.</summary>
+      <remarks>Color space is assumed to be in scRGB.</remarks>
+    </member>
+    <member name="P:Microsoft.Graphics.Canvas.Effects.HdrToneMapEffect.OutputMaxLuminance">
+      <summary>Specifies the output luminance level in nits.</summary>
+      <remarks>Color space is assumed to be in scRGB.</remarks>
+    </member>
+    <member name="P:Microsoft.Graphics.Canvas.Effects.HdrToneMapEffect.DisplayMode">
+      <summary>
+        The Display Mode.
+        Default value <see cref="F:Microsoft.Graphics.Canvas.Effects.HdrToneMapEffectDisplayMode.DisplayModeSdr"/>.
+      </summary>
+    </member>
+
+    <member name="T:Microsoft.Graphics.Canvas.Effects.HdrToneMapEffectDisplayMode">
+      <summary>Specifies how turbulence noise should be generated.</summary>
+    </member>
+    <member name="F:Microsoft.Graphics.Canvas.Effects.HdrToneMapEffectDisplayMode.DisplayModeSdr">
+      <summary>Indicates tonemapping for an SDR target.</summary>
+    </member>
+    <member name="F:Microsoft.Graphics.Canvas.Effects.HdrToneMapEffectDisplayMode.DisplayModeHdr">
+      <summary>Indicates tonemapping for an HDR target.</summary>
+    </member>
+    
+    <inherittemplate name="EffectTemplate" replacement="HdrToneMapEffect" />
+    <inherittemplate name="ICanvasEffectTemplate" replacement="HdrToneMapEffect" />
+
+  </members>
+</doc>
