@@ -16,7 +16,7 @@ namespace ABI { namespace Microsoft { namespace Graphics { namespace Canvas { na
         {
             // Set default values
             SetBoxedProperty<float[4]>(D2D1_CROP_PROP_RECT, Rect{ -std::numeric_limits<float>::infinity(), -std::numeric_limits<float>::infinity(), std::numeric_limits<float>::infinity(), std::numeric_limits<float>::infinity() });
-            SetBoxedProperty<uint32_t>(D2D1_CROP_PROP_BORDER_MODE, EffectBorderMode::Soft);
+            SetBoxedProperty<uint32_t>(D2D1_CROP_PROP_BORDER_MODE, D2D1_BORDER_MODE_SOFT);
         }
     }
 

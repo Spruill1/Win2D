@@ -17,7 +17,7 @@ namespace ABI { namespace Microsoft { namespace Graphics { namespace Canvas { na
             // Set default values
             SetBoxedProperty<float>(D2D1_HDRTONEMAP_PROP_INPUT_MAX_LUMINANCE, 4000.0f);
             SetBoxedProperty<float>(D2D1_HDRTONEMAP_PROP_OUTPUT_MAX_LUMINANCE, 300.0f);
-            SetBoxedProperty<uint32_t>(D2D1_HDRTONEMAP_PROP_DISPLAY_MODE, D2D1_HDRTONEMAP_DISPLAY_MODE_SDR);
+            SetBoxedProperty<uint32_t>(D2D1_HDRTONEMAP_PROP_DISPLAY_MODE, HDRToneMapEffectDisplayMode::SDR);
         }
     }
 

@@ -16,8 +16,8 @@ namespace ABI { namespace Microsoft { namespace Graphics { namespace Canvas { na
         {
             // Set default values
             SetBoxedProperty<float>(D2D1_GAUSSIANBLUR_PROP_STANDARD_DEVIATION, 3.0f);
-            SetBoxedProperty<uint32_t>(D2D1_GAUSSIANBLUR_PROP_OPTIMIZATION, EffectOptimization::Balanced);
-            SetBoxedProperty<uint32_t>(D2D1_GAUSSIANBLUR_PROP_BORDER_MODE, EffectBorderMode::Soft);
+            SetBoxedProperty<uint32_t>(D2D1_GAUSSIANBLUR_PROP_OPTIMIZATION, D2D1_GAUSSIANBLUR_OPTIMIZATION_BALANCED);
+            SetBoxedProperty<uint32_t>(D2D1_GAUSSIANBLUR_PROP_BORDER_MODE, D2D1_BORDER_MODE_SOFT);
         }
     }
 

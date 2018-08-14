@@ -17,7 +17,7 @@ namespace ABI { namespace Microsoft { namespace Graphics { namespace Canvas { na
         if (!effect)
         {
             // Set default values
-            SetBoxedProperty<uint32_t>(D2D1_RGBTOHUE_PROP_OUTPUT_COLOR_SPACE, D2D1_RGBTOHUE_OUTPUT_COLOR_SPACE_HUE_SATURATION_VALUE);
+            SetBoxedProperty<uint32_t>(D2D1_RGBTOHUE_PROP_OUTPUT_COLOR_SPACE, EffectHueColorSpace::Hsv);
         }
     }
 

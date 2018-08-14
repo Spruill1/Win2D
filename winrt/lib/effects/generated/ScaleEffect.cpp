@@ -17,8 +17,8 @@ namespace ABI { namespace Microsoft { namespace Graphics { namespace Canvas { na
             // Set default values
             SetBoxedProperty<float[2]>(D2D1_SCALE_PROP_SCALE, Numerics::Vector2{ 1, 1 });
             SetBoxedProperty<float[2]>(D2D1_SCALE_PROP_CENTER_POINT, Numerics::Vector2{ 0, 0 });
-            SetBoxedProperty<uint32_t>(D2D1_SCALE_PROP_INTERPOLATION_MODE, D2D1_INTERPOLATION_MODE_LINEAR);
-            SetBoxedProperty<uint32_t>(D2D1_SCALE_PROP_BORDER_MODE, EffectBorderMode::Soft);
+            SetBoxedProperty<uint32_t>(D2D1_SCALE_PROP_INTERPOLATION_MODE, D2D1_CONVOLVEMATRIX_SCALE_MODE_LINEAR);
+            SetBoxedProperty<uint32_t>(D2D1_SCALE_PROP_BORDER_MODE, D2D1_BORDER_MODE_SOFT);
             SetBoxedProperty<float>(D2D1_SCALE_PROP_SHARPNESS, 0.0f);
         }
     }

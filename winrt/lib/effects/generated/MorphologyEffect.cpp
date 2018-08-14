@@ -15,7 +15,7 @@ namespace ABI { namespace Microsoft { namespace Graphics { namespace Canvas { na
         if (!effect)
         {
             // Set default values
-            SetBoxedProperty<uint32_t>(D2D1_MORPHOLOGY_PROP_MODE, MorphologyEffectMode::Erode);
+            SetBoxedProperty<uint32_t>(D2D1_MORPHOLOGY_PROP_MODE, D2D1_MORPHOLOGY_MODE_ERODE);
             SetBoxedProperty<int32_t>(D2D1_MORPHOLOGY_PROP_WIDTH, 1);
             SetBoxedProperty<int32_t>(D2D1_MORPHOLOGY_PROP_HEIGHT, 1);
         }

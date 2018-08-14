@@ -16,7 +16,7 @@ namespace ABI { namespace Microsoft { namespace Graphics { namespace Canvas { na
         {
             // Set default values
             SetBoxedProperty<float[20]>(D2D1_COLORMATRIX_PROP_COLOR_MATRIX, Matrix5x4{ 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0 });
-            SetBoxedProperty<uint32_t>(D2D1_COLORMATRIX_PROP_ALPHA_MODE, CanvasAlphaMode::Straight);
+            SetBoxedProperty<uint32_t>(D2D1_COLORMATRIX_PROP_ALPHA_MODE, D2D1_COLORMATRIX_ALPHA_MODE_PREMULTIPLIED);
             SetBoxedProperty<boolean>(D2D1_COLORMATRIX_PROP_CLAMP_OUTPUT, static_cast<boolean>(false));
         }
     }

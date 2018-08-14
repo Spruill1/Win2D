@@ -18,7 +18,7 @@ namespace ABI { namespace Microsoft { namespace Graphics { namespace Canvas { na
         {
             // Set default values
             SetBoxedProperty<IEffectTransferTable3D*>(D2D1_LOOKUPTABLE3D_PROP_LUT, static_cast<IEffectTransferTable3D*>(nullptr));
-            SetBoxedProperty<uint32_t>(D2D1_LOOKUPTABLE3D_PROP_ALPHA_MODE, CanvasAlphaMode::Straight);
+            SetBoxedProperty<uint32_t>(D2D1_LOOKUPTABLE3D_PROP_ALPHA_MODE, D2D1_COLORMANAGEMENT_ALPHA_MODE_PREMULTIPLIED);
         }
     }
 

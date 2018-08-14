@@ -16,11 +16,11 @@ namespace ABI { namespace Microsoft { namespace Graphics { namespace Canvas { na
         {
             // Set default values
             SetBoxedProperty<IColorManagementProfile*>(D2D1_COLORMANAGEMENT_PROP_SOURCE_COLOR_CONTEXT, static_cast<IColorManagementProfile*>(nullptr));
-            SetBoxedProperty<uint32_t>(D2D1_COLORMANAGEMENT_PROP_SOURCE_RENDERING_INTENT, ColorManagementRenderingIntent::Perceptual);
+            SetBoxedProperty<uint32_t>(D2D1_COLORMANAGEMENT_PROP_SOURCE_RENDERING_INTENT, D2D1_COLORMANAGEMENT_RENDERING_INTENT_PERCEPTUAL);
             SetBoxedProperty<IColorManagementProfile*>(D2D1_COLORMANAGEMENT_PROP_DESTINATION_COLOR_CONTEXT, static_cast<IColorManagementProfile*>(nullptr));
-            SetBoxedProperty<uint32_t>(D2D1_COLORMANAGEMENT_PROP_DESTINATION_RENDERING_INTENT, ColorManagementRenderingIntent::Perceptual);
-            SetBoxedProperty<uint32_t>(D2D1_COLORMANAGEMENT_PROP_ALPHA_MODE, CanvasAlphaMode::Straight);
-            SetBoxedProperty<uint32_t>(D2D1_COLORMANAGEMENT_PROP_QUALITY, ColorManagementEffectQuality::Normal);
+            SetBoxedProperty<uint32_t>(D2D1_COLORMANAGEMENT_PROP_DESTINATION_RENDERING_INTENT, D2D1_COLORMANAGEMENT_RENDERING_INTENT_PERCEPTUAL);
+            SetBoxedProperty<uint32_t>(D2D1_COLORMANAGEMENT_PROP_ALPHA_MODE, D2D1_COLORMANAGEMENT_ALPHA_MODE_PREMULTIPLIED);
+            SetBoxedProperty<uint32_t>(D2D1_COLORMANAGEMENT_PROP_QUALITY, D2D1_COLORMANAGEMENT_QUALITY_NORMAL);
         }
     }
 

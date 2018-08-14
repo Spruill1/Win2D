@@ -18,7 +18,7 @@ namespace ABI { namespace Microsoft { namespace Graphics { namespace Canvas { na
         {
             // Set default values
             SetBoxedProperty<float>(D2D1_SEPIA_PROP_INTENSITY, 0.5f);
-            SetBoxedProperty<uint32_t>(D2D1_SEPIA_PROP_ALPHA_MODE, CanvasAlphaMode::Straight);
+            SetBoxedProperty<uint32_t>(D2D1_SEPIA_PROP_ALPHA_MODE, D2D1_COLORMANAGEMENT_ALPHA_MODE_PREMULTIPLIED);
         }
     }
 

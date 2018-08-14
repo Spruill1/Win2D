@@ -15,8 +15,8 @@ namespace ABI { namespace Microsoft { namespace Graphics { namespace Canvas { na
         if (!effect)
         {
             // Set default values
-            SetBoxedProperty<uint32_t>(D2D1_DPICOMPENSATION_PROP_INTERPOLATION_MODE, D2D1_INTERPOLATION_MODE_LINEAR);
-            SetBoxedProperty<uint32_t>(D2D1_DPICOMPENSATION_PROP_BORDER_MODE, EffectBorderMode::Hard);
+            SetBoxedProperty<uint32_t>(D2D1_DPICOMPENSATION_PROP_INTERPOLATION_MODE, D2D1_DPICOMPENSATION_INTERPOLATION_MODE_LINEAR);
+            SetBoxedProperty<uint32_t>(D2D1_DPICOMPENSATION_PROP_BORDER_MODE, D2D1_BORDER_MODE_HARD);
             SetBoxedProperty<float[2]>(D2D1_DPICOMPENSATION_PROP_INPUT_DPI, Numerics::Vector2{ 96, 96 });
         }
     }
